@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aura by K&A</title>
+<style>
+body {
+  background:#171923;
+  color:white;
+  font-family:Arial;
+  text-align:center;
+  padding:25px;
+}
+.card {
+  max-width:450px;
+  margin:auto;
+  padding:25px;
+  background:#25283a;
+  border-radius:18px;
+}
+button {
+  width:100%;
+  padding:15px;
+  margin:10px 0;
+  border:0;
+  border-radius:9px;
+  background:#a78bfa;
+  font-weight:bold;
+  font-size:16px;
+}
+video {
+  width:100%;
+  margin:10px 0;
+  background:black;
+  border-radius:10px;
+}
+input {
+  width:90%;
+  padding:12px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Aura by K&A</h1>
+<p>Welcome! Start your sharing session.</p>
+
+<input id="name" placeholder="Your name">
+
+<h3>Camera Access</h3>
+<button id="camera">Enable Camera</button>
+<video id="cameraView" autoplay muted playsinline></video>
+
+<h3>Screen Sharing</h3>
+<button id="screen">Share Screen</button>
+<video id="screenView" autoplay muted playsinline></video>
+
+<h3>Photos & Videos</h3>
+<input id="files" type="file" accept="image/*,video/*" multiple>
+<button id="send" disabled>Send Selected Files</button>
+
+<button id="connect">Connect to Admin</button>
+<button id="stop">Stop Sharing</button>
+
+<p id="status">Waiting for permission</p>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/visitor.js"></script>
+</body>
+</html>
