@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aura by K&A Admin</title>
+<style>
+body {
+  background:#171923;
+  color:white;
+  font-family:Arial;
+  padding:20px;
+}
+.card {
+  max-width:700px;
+  margin:30px auto;
+  background:#25283a;
+  padding:22px;
+  border-radius:15px;
+}
+input,button {
+  width:100%;
+  padding:14px;
+  margin:9px 0;
+  box-sizing:border-box;
+  border-radius:8px;
+}
+button {
+  background:#a78bfa;
+  border:0;
+  font-weight:bold;
+}
+video {
+  width:100%;
+  background:black;
+  margin:8px 0;
+  border-radius:8px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Aura by K&A</h1>
+<h2>Admin Login</h2>
+
+<input id="password" type="password"
+placeholder="Enter Admin Password">
+
+<button id="login">Login</button>
+<p id="status">Please login.</p>
+
+<div id="dashboard" hidden>
+<h2>Visitor Sessions</h2>
+<div id="visitors"></div>
+</div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/admin.js"></script>
+</body>
+</html>
